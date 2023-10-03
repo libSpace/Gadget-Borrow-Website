@@ -1353,12 +1353,9 @@ width: 75%;
 
   .service-toggle { margin-inline: 0; }
 
-
-
   /**
    * PROJECT
    */
-
   .project-list { column-count: 3; }
 
   .project-list > li:first-child {
@@ -1366,8 +1363,6 @@ width: 75%;
     margin: 25px;
     margin-left: 0;
   }
-
-
 
   /**
    * CONTACT
@@ -1385,8 +1380,6 @@ width: 75%;
 
   .contact-list { margin-left: -40px; }
 
-
-
   /**
    * FOOTER
    */
@@ -1400,28 +1393,17 @@ width: 75%;
   .footer .logo { margin-bottom: 0; }
 
 }
-
-
-
-
-
 /**
  * responsive for larger than 1200px screen
  */
-
 @media (min-width: 1200px) {
 
   /**
    * REUSED STYLE
    */
-
   .container { max-width: 1150px; }
 
   .section-title { max-width: 460px; }
-
-
-
-
   /**
    * HERO
    */
@@ -1430,13 +1412,32 @@ width: 75%;
 
   .scroll-down { right: -80px; }
 
-
-
-
   /**
    * ABOUT
    */
-
   .about-banner { max-width: 450px; }
+}
 
+/* CSS for the cookie banner */
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  display: none; /* Hidden by default */
+}
+
+#accept-cookies-button {
+  background-color: hsl(24, 74%, 58%);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  align-items: center;
 }

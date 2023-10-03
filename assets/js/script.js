@@ -154,7 +154,6 @@ const validateInputs = () => {
     // const subject2Value = subject2.value.trim();
     const feedbackValue = feedback.value;
 
-
     if(usernameValue === '') {
         setError(username, 'Username can never be an emptyspace');
     } else if(!isNaN(usernameValue)){
@@ -186,7 +185,6 @@ const validateInputs = () => {
     } else {
         setSuccess(feedbackValue);
     }
-
 };
 
 ///
@@ -204,4 +202,34 @@ toggleButton.addEventListener('click', function () {
     myDiv.classList.remove('dark-style');
     myDiv.classList.add('light-style');
   }
+});
+
+
+function openGameWindow(){
+  window.open("/assets/Game/game.html", 
+              "Maze - Game", 
+              "popup,left=100,top=100,width=520,height=520");
+}
+
+// JavaScript for the cookie consent banner
+document.addEventListener("DOMContentLoaded", function () {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptCookiesButton = document.getElementById("accept-cookies-button");
+
+  // Check if the user has already accepted cookies
+  const hasAcceptedCookies = localStorage.getItem("cookiesAccepted");
+
+  // If not, show the cookie banner
+  if (!hasAcceptedCookies) {
+      cookieBanner.style.display = "block";
+  }
+
+  // Handle the "Accept Cookies" button click
+  acceptCookiesButton.addEventListener("click", function () {
+      // Hide the cookie banner
+      cookieBanner.style.display = "none";
+
+      // Set a flag in local storage to remember the user's choice
+      localStorage.setItem("cookiesAccepted", "true");
+  });
 });
